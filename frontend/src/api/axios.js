@@ -1,7 +1,13 @@
 import axios from 'axios';
 
+// In production (Netlify), call the Render backend directly.
+// In development, Vite proxy forwards /api to localhost:8080.
+const API_BASE_URL = import.meta.env.PROD
+  ? 'https://arosetu-backend.onrender.com/api'
+  : '/api';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },

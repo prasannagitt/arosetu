@@ -1,0 +1,15 @@
+# Render.com Build & Deploy Configuration
+# This file tells Render how to build and run the Spring Boot backend
+
+# Use Docker for the build
+services:
+  - type: web
+    name: arosetu-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
