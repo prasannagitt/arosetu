@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: arosetu-backend
+
+  datasource:
+    url: jdbc:h2:mem:arosetu_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:YVJvc2V0dUhlYWx0aGNhcmVQbGF0Zm9ybVNlY3JldEtleUZvckpXVFRva2VuR2VuZXJhdGlvbjI1NkJpdHM=}
+    expiration: 86400000
+
+server:
+  port: 8080

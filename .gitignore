@@ -1,0 +1,41 @@
+# Java
+backend/target/
+*.class
+*.jar
+*.war
+
+# Maven
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Env
+.env
+.env.local
+.env.production
+
+# H2 Database files
+*.db
+*.trace.db
+*.lock.db
+
+# Reference project (not part of AroSetu)
+Hospital-Management-System-main/
+
+# Logs
+*.log
