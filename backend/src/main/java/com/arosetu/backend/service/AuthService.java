@@ -76,7 +76,7 @@ public class AuthService {
         } else if (request.getRole() == Role.DOCTOR) {
             Doctor doctor = new Doctor();
             doctor.setUser(savedUser);
-            doctor.setApprovalStatus(ApprovalStatus.PENDING);
+            doctor.setApprovalStatus(ApprovalStatus.APPROVED);
             doctorRepository.save(doctor);
         }
 
